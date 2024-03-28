@@ -3,6 +3,7 @@
 let language = 'JavaScript';
 
 //1. Use string concatenation and two slice() methods to print 'JS' from 'JavaScript'
+console.log(language.slice(0) + language.slice(5));
 
 //2. Without using slice(), use method chaining to accomplish the same thing.
 
