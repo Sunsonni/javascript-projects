@@ -39,4 +39,4 @@ console.log(dnaTwo.slice(16,19));
 console.log(`The DNA string is ${dnaTwo.length} characters long.`);
 
 //5) Just for fun, apply methods to ``dna`` and use another template literal to print, 'taco cat'.
-console.log(`${dna.slice(4,7).toLowerCase()}o ${dna.slice(dna.indexOf('CAT'),dna.indexOf('CAT')+3).toLowerCase()}`);
+console.log(`${dna.slice(4,7).toLowerCase()}o ${dna.slice(dna.indexOf('CAT'),dna.indexOf('CAT')+3).toLowerCase()}`);clea
