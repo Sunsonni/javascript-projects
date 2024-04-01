@@ -6,12 +6,11 @@ let veggies = ['peas', 'green beans', 'kale', 'edamame', 'broccoli', 'asparagus'
 let beverages = ['juice', 'milk', 'water', 'soy milk', 'soda', 'tea'];
 let desserts = ['apple', 'banana', 'more kale', 'ice cream', 'chocolate', 'kiwi'];
 
-
 function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   let pantry = [protein, grains, veggies, beverages, desserts];
   let meals = [];
   let i = 0
-
+  
   while (i < numMeals && i < protein.length) {
     let meal = [];
     for (let j = 0; j < pantry.length; j++) {
@@ -22,7 +21,6 @@ function mealAssembly(protein, grains, veggies, beverages, desserts, numMeals) {
   }
   return meals;
 }
-
 
 function askForNumber() {
   let numMeals = input.question("How many meals would you like to make? ");
@@ -35,7 +33,6 @@ function askForNumber() {
 
   return numMeals;
 }
-
 
 function generatePassword(string1, string2) {
   let numberOfLoops = 0;
