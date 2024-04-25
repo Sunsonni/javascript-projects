@@ -6,12 +6,68 @@
     <style>
       label { display: block; margin-bottom: 7px;}
     </style>
+
+    <script>
+      window.addEventListener("load", function() {
+        let form = document.querySelector("form");
+        form.addEventListener("submit", function(){
+          let name = document.querySelector("input[name=testName]");
+          let date = document.querySelector("input[name=testDate]");
+          let rocketNum = document.querySelector("input[name=boosterCount]");
+          let windSelect = document.querySelector("input[name=windRating]");
+          console.log(date.value);
+          if(name.value === "" || date.value === "" || rocketNum.value === "" || windSelect.value === ""){
+            window.alert("All fields are required!");
+            event.preventDefault();
+          }
+        });
+      });
+    </script>
+
   </head>
   <body>
-    <!-- TODO: add form here -->
-    
+  <!-- form creation -->
+    <form action="https://handlers.education.launchcode.org/request-parrot" method="POST">
+     <!-- receive test name -->
+      <label>
+        Test Name
+        <input type="text" name="testName"/>
+      </label>
+      <!-- recieve test date -->
+      <label>
+        Test Date
+        <input type="date" name="testDate"/>
+      </label>
+      <!-- rocket type -->
+      <label>
+        Rocket Type
+        <select name="rocketType">
+          <option value="1">Brant</option>
+          <option value="2">Lynx</option>
+          <option value="3">Orion</option>
+          <option value="4">Terrier</option>
+        </select>  
+      </label>
+      <!-- receive number value for rocket boosters -->
+      <label>
+        Number of Rocket Boosters
+        <input type="number" name="boosterCount" min="0" max="10">
+      </label>
+      <!-- radio for wind rating selection -->
+      <label>
+        Wind Rating:
+        <label>No Wind<input type="radio" name="windRating" value="0" checked/></label>
+        <label>Mild<input type="radio" name="windRating" value="10"/></label>
+        <label>Strong<input type="radio" name="windRating" value="20"/></label>
+      </label>
+      <!-- checkbox -->
+      <label>Use production grade servers<input type="checkbox" name="productionServers"></label>
+      <!-- final button to submit items -->
+      <button id="simulationButton">Run Simulation</button>
+    </form>
 
-    <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it.
+    
+    <!-- <p>WARNING: This ONLY works in <b>replit</b> if this "result" page is opened in its own window. Click the icon that shows a box with an arrow coming out of it. -->
     </p>
   </body>
   
